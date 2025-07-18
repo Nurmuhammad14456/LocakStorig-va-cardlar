@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Cardlarni qoshish</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+
+<body class="bg-gray-100">
+
+   <header
+      class="bg-white shadow-md fixed top-0 left-0 w-full h-[80px] z-50 px-8 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold"><i class="fa-solid fa-store"></i> FakeStore</h1>
+      <div class="flex items-center gap-6">
+         <input type="text" id="searchInput" placeholder="Mahsulot qidirish..." class="px-4 py-2 border rounded-lg" />
+         <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Qidirish</button>
+         <button class=" text-2xl"><i class="fas fa-shopping-cart"></i></button>
+         <button id="showLiked" class="relative text-3xl text-red-500 hover:text-red-700">
+            <a href="./backet.html"><i class="fa-regular fa-heart"></i></a>
+            <span id="likeCount"
+               class="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">0</span>
+         </button>
+      </div>
+   </header>
+
+
+
+   <main class="mt-[100px] container mx-auto px-4 py-6">
+      <h2 class="text-xl font-semibold mb-4">Mahsulotlar:</h2>
+      <div id="productWrapper" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      </div>
+   </main>
+
+   <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-40 z-50 flex items-center justify-center">
+      <div class="bg-white max-w-3xl w-full p-6 rounded-xl flex gap-6 relative">
+         <button id="closeModal" class="absolute top-2 right-2 text-4xl text-gray-600 hover:text-black">&times;</button>
+         <img id="modalImage" class="w-1/2 h-60 object-contain rounded-lg" />
+         <div>
+            <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <p id="modalDesc" class="text-gray-600 mb-4"></p>
+            <p id="modalPrice" class="text-green-600 font-semibold text-lg"></p>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+   <script src="./js/ap.js"></script>
+</body>
+
+</html>
