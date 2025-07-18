@@ -114,7 +114,7 @@ document.getElementById("searchInput").addEventListener("input", (e) => {
   cardsInput(filtered);
 });
 
-// logon qilgan joyimS
+// logon qilgan joyim
 const token = localStorage.getItem("accessToken");
 if (!token) {
   window.location.href = "login.html";
